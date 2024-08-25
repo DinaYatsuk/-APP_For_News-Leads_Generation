@@ -1,0 +1,130 @@
+/* Файл style.css */
+
+/* Ограничение границ страницы */
+body {
+    overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
+}
+
+/* Стилизация шапки */
+header.navbar {
+    background-color: #7B68EE; /* Цвет фона */
+}
+
+/* Добавление класса text-center для выравнивания текста по центру */
+.text-center {
+    text-align: center;
+}
+
+/* Стилизация текста внутри навигационной панели */
+header.navbar .navbar-brand {
+    color: #fff; /* Цвет текста */
+    font-size: 38px; /* Размер шрифта */
+}
+
+/* Стилизация контейнера с формой */
+.container.form-container {
+    margin-top: 50px; /* Отступ сверху */
+    text-align: center; /* Выравнивание по центру */
+}
+
+/* Основные стили контейнера формы */
+.form-container {
+    background-color: #f0f0f0; /* Цвет фона */
+    border-radius: 20px; /* Радиус скругления углов */
+    padding: 20px; /* Внутренний отступ */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень */
+    display: inline-block; /* Для корректного центрирования */
+}
+
+/* Общие стили для элементов формы */
+.form-group select,
+.form-group textarea,
+.form-group button {
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для сообщения с ответом */
+.answer-text {
+    font-size: 18px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Стили для кнопки отправки формы */
+.btn.btn-primary  {
+    background-color: #0000FF; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+}
+
+/* Стили для кнопки при нажатии или фокусе */
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+    background-color: #6A5ACD; /* Новый цвет фона */
+    color: #fff; /* Новый цвет текста */
+    border-color: #6A5ACD; /* Новый цвет рамки */
+    outline: none; /* Убираем обводку */
+}
+
+/* Стилизация выпадающего списка */
+.form-group select {
+    margin-bottom: 20px; /* Отступ снизу */
+    border: 1px solid #ced4da; /* Цвет рамки */
+    border-radius: 4px; /* Радиус скругления углов */
+    padding: 6px 12px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    color: #495057; /* Цвет текста */
+    background-color: #fff; /* Цвет фона */
+    background-image: none; /* Убираем фоновое изображение */
+    -webkit-appearance: none; /* Убираем стандартные стили для WebKit */
+    -moz-appearance: none; /* Убираем стандартные стили для Firefox */
+    appearance: none; /* Убираем стандартные стили */
+}
+
+/* Стили для фокуса на выпадающем списке */
+.form-group select:focus {
+    border-color: #80bdff; /* Изменение цвета рамки при фокусе */
+    outline: 0; /* Убираем фокусовую рамку */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Тень при фокусе */
+}
+
+/* Удаление стрелки в выпадающем списке в IE */
+.form-group select::-ms-expand {
+    display: none; /* Убираем стрелку в Internet Explorer */
+}
+
+/* Дополнительные отступы для выпадающего списка */
+.form-group select {
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+/* Стилизация основного контента */
+.container.content {
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Стилизация сообщений об ошибках */
+.alert.alert-danger {
+    background-color: #f8d7da; /* Цвет фона */
+    color: #721c24; /* Цвет текста */
+    border-color: #f5c6cb; /* Цвет рамки */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Стилизация текста в сообщениях об ошибках */
+.alert.alert-danger p {
+    margin: 5px 0; /* Внутренние отступы */
+}
+
+/* Стилизация текста основного контента */
+.container.content p {
+    font-size: 18px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Отступы для заголовков и кнопок в основном контенте */
+.container.content h1,
+.container.content p,
+.container.content textarea,
+.container.content button {
+    margin-bottom: 20px; /* Отступ снизу */
+}

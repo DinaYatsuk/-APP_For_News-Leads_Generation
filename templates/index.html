@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container form-container">
+        <h1>{% block title %} Генерация лида {% endblock %}</h1>
+
+        <!-- Добавьте div для обертки текста и примените класс text-center -->
+        <div class="text-center">
+            <p>Выберите модель:</p>
+        </div>
+
+        <form method="post">
+            <div class="form-group">
+                <!-- Добавляем выпадающий список с тремя моделями -->
+                <select name="model" class="form-control">
+                    <option value="rugpt3medium" {% if request.form['model'] == 'rugpt3medium' %} selected {% endif %}>RuGPT3medium</option>
+                    <option value="gpt3.5" {% if request.form['model'] == 'gpt3.5' %} selected {% endif %}>GPT3.5</option>
+                    <option value="gpt4" {% if request.form['model'] == 'gpt4' %} selected {% endif %}>GPT4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Введите текст:</p>
+                <textarea name="text" placeholder="Введите текст для генерации лида" class="form-control" rows="10">{{ request.form['text'] }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="submitBtn">Отправить</button>
+            </div>
+        </form>
+
+        {% if answer %}
+            <hr/>
+            <p class="answer-text">
+                {{ answer }}
+            </p>
+        {% endif %}
+    </div>
+
+    <script>
+        // Дождемся полной загрузки документа
+        document.addEventListener("DOMContentLoaded", function() {
+            // Находим кнопку по её id
+            var submitButton = document.getElementById("submitBtn");
+
+            // Добавляем обработчик события на отправку формы
+            document.querySelector("form").addEventListener("submit", function() {
+                // Изменяем текст кнопки на "Генерация..."
+                submitButton.innerHTML = "Генерация...";
+            });
+        });
+    </script>
+{% endblock %}
